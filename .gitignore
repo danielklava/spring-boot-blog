@@ -5,7 +5,7 @@
 /**/*.class
 /target/
 
-### STS ###
+### STS ###git st
 .apt_generated
 .classpath
 .factorypath
