@@ -1,0 +1,112 @@
+@color-lightgray: #f9f9f9;
+@color-gray: #777;
+@color-darkgray: #333;
+
+@header-bg-color: #444;
+
+@bg-featured-color: @color-gray;
+@bg-main-color: #FFF;
+
+body {
+    background-color: @color-lightgray;
+
+    header {
+        background-color: @header-bg-color;
+        color: #FFF;
+    }
+
+    .jumbotron.bg-home{
+        background-image: url("https://placeimg.com/1000/480/tech/sepia");
+        background-size: cover;
+        margin-bottom: 0px;
+    }
+
+    .main-content{
+        box-shadow: 0px 0px 5px rgba(0,0,0, 0.3);
+    }
+
+    .featured-posts{
+    }
+
+    .latest-posts {
+        top: -30px;
+    }
+
+    .list-posts {
+    }
+
+    .post-summary{
+
+        a {
+            color: #000;
+
+            &:hover{
+                text-decoration: none;
+            }
+        }
+
+        article {
+            border: none;
+            padding: 20px;
+            background-color: #EEE;
+            box-shadow: 0px 0px 5px rgba(0,0,0, 0.3);
+
+            &:hover {
+                background-color: #FFF;
+                transition: 0.5s;
+            }
+
+            .content{
+                max-height: 100px;
+            }
+            .date {
+                font-size: 9px;
+                color: @color-darkgray;
+            }
+        }
+    }
+
+    .blog-post {
+
+        background-color: @bg-main-color;
+        position: relative;
+        -webkit-box-shadow: 0px 0px 5px rgba(0,0,0,0.5);
+        -moz-box-shadow: 0px 0px 5px rgba(0,0,0,0.5);
+        box-shadow: 0px 0px 5px rgba(0,0,0,0.5);
+
+        padding-top: 30px;
+        padding-bottom: 30px;
+        margin-bottom: 30px;
+
+        h2{
+            border-bottom: 1px solid @color-lightgray;
+        }
+
+        .date {
+            font-size: 10px;
+            color: @color-darkgray;
+        }
+    }
+
+    .archive-list{
+        list-style: none;
+        padding: 0;
+
+        li {
+            margin: 0;
+        }
+    }
+
+    footer {
+        padding: 2.5rem 0;
+        color: #999;
+        text-align: center;
+        background-color: @color-lightgray;
+        border-top: .05rem solid @color-gray;
+    }
+
+    .form-login{
+        border: 1px solid @color-lightgray;
+        margin: 20px;
+    }
+}

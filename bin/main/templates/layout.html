@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+    <head th:fragment="site-head">
+        
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <link rel="stylesheet" href="../public/css/styles.css" th:href="@{/css/styles.css}" />
+        <link rel="icon" href="../static/img/favicon.ico" th:href="@{/img/favicon.ico}" />
+
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+        <script src="../static/js/blog-scripts.js" th:src="@{/js/blog-scripts.js}"></script>
+
+    </head>
+    <body>
+        <header th:fragment="site-header" th:remove="tag">
+            <header>
+                <a href="index.html" th:href="@{/}"><img src="../static/img/site-logo.png" th:src="@{/img/site-logo.png}" /></a>
+                <a href="index.html" th:href="@{/}">Home</a>
+                <a href="users/login.html" th:href="@{/users/login}">Login</a>
+                <a href="users/register.html" th:href="@{/users/register}">Register</a>
+                <a href="posts/index.html" th:href="@{/posts}">Posts</a>
+                <a href="posts/create.html" th:href="@{/posts/create}">Create Post</a>
+                <a href="users/index.html" th:href="@{/users}">Users</a>
+                <div id="logged-in-info">
+                    <span>Hello, <b>(user)</b></span>
+                    <form method="post" th:action="@{/users/logout}">
+                        <input type="submit" value="Logout"/>
+                    </form>
+                </div>
+            </header>
+        </header>
+
+        <h1>Welcome</h1>
+        <p>Welcome to the Spring MVC Blog.</p>
+
+        <footer th:fragment="site-footer">
+            &copy; Spring MVC Blog System, 2016
+        </footer>
+    </body>
+</html>
