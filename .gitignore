@@ -5,6 +5,7 @@
 /**/*.class
 */target/*
 */target/**
+target/*
 
 ### STS ###git st
 .apt_generated
